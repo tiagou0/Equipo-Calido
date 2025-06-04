@@ -17,7 +17,6 @@ function cn(...classes) {
 }
 
 const RotatingText = forwardRef((props, ref) => {
-  console.log("Props recibidos:", props); // Añadir este log
   const {
     texts,
     transition = { type: "spring", damping: 25, stiffness: 300 },

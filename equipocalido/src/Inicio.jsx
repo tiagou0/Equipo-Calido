@@ -30,7 +30,7 @@ function Inicio() {
           splitLevelClassName="rotating-split-level"
           elementLevelClassName="rotating-element"
           transition={{ type: "spring", damping: 30, stiffness: 400 }}
-          rotationInterval={3000}  
+          rotationInterval={2500} 
         />
       </div>
     </>
