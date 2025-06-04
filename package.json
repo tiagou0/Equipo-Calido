@@ -1,0 +1,20 @@
+{
+  "name": "equipo-calido",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagou0/Equipo-Calido.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiagou0/Equipo-Calido/issues"
+  },
+  "homepage": "https://github.com/tiagou0/Equipo-Calido#readme",
+  "description": ""
+}
