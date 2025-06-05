@@ -159,10 +159,6 @@ const RotatingText = forwardRef((props, ref) => {
     return () => clearInterval(intervalId);
   }, [next, rotationInterval, auto]);
 
-  useEffect(() => {
-    console.log("Texto actual:", texts[currentTextIndex]); // Añadir este log
-  }, [currentTextIndex, texts]);
-
   return (
     <motion.span
       className={cn("text-rotate", mainClassName)}
