@@ -39,17 +39,3 @@ function Inicio() {
 }
 
 export default Inicio;
-
-// <RotatingText
-//  texts={['React', 'Bits', 'Es', 'Genial!']}
-//  mainClassName="rotating-container"
-//  staggerFrom="last"
-//  initial={{ y: "100%" }}
-//  animate={{ y: 0 }}
-//  exit={{ y: "-120%" }}
-//  staggerDuration={0.025}
-//  splitLevelClassName="rotating-split-level"
-//  elementLevelClassName="rotating-element"
-//  transition={{ type: "spring", damping: 30, stiffness: 400 }}
-//  rotationInterval={2000}
-///>

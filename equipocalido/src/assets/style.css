@@ -34,18 +34,22 @@
   height: 100%;
   font-weight: bold;
   color: #ffffff;
-  text-align: left;  /* Cambiado de center a left */
+  text-align: left;
+  /* Cambiado de center a left */
   margin-top: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  align-items: flex-start !important; /* Cambiado de center a flex-start */
-  padding-left: 50px; /* Añadido para dar margen desde el borde izquierdo */
+  align-items: flex-start !important;
+  /* Cambiado de center a flex-start */
+  padding-left: 50px;
+  /* Añadido para dar margen desde el borde izquierdo */
 }
 
 .inicio-texto h1 {
   font-size: 3rem;
-  margin-left: 0; /* Removido el margen izquierdo */
+  margin-left: 0;
+  /* Removido el margen izquierdo */
   margin-top: 100px;
 }
 
@@ -137,15 +141,18 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center; /* Cambiado de start a center */
+  align-items: center;
+  /* Cambiado de start a center */
   border-radius: 12px;
   font-weight: bold;
   font-size: 2rem;
   width: fit-content;
-  margin: 20px 0 0; /* Cambiado auto por 0 para remover el centrado */
+  margin: 20px 0 0;
+  /* Cambiado auto por 0 para remover el centrado */
   text-shadow: none;
   float: none !important;
-  align-self: flex-start; /* Añadido para alinear a la izquierda */
+  align-self: flex-start;
+  /* Añadido para alinear a la izquierda */
 }
 
 .rotating-split-level {
@@ -165,4 +172,20 @@
   gap: 20px;
   margin-top: 20px;
   flex-direction: row;
+  width: 100%;
+}
+
+.containerServicesTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+  flex-direction: column;
+  font-family: "Tilt Warp", sans-serif;
+  color: #F1B440;
+}
+
+.h2containerServices {
+  font-size: 80px;
 }
