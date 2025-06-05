@@ -1,3 +1,9 @@
+#root {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
 .navbarEC {
   background-color: #FAFA61;
   padding: 0.5rem 1rem;
@@ -184,6 +190,8 @@
   flex-direction: column;
   font-family: "Tilt Warp", sans-serif;
   color: #F1B440;
+  margin-top: -200px;
+
 }
 
 .h2containerServices {
