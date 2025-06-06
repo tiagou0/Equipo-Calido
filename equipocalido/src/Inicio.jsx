@@ -7,8 +7,9 @@ function Inicio() {
   return (
     <>
       <div className="inicio-container">
-        <Figure>
+        <Figure className='inicio-imagen-container'>
           <Figure.Image
+            className="inicio-imagen"
             width='100%'
             height='100%'
             style={{ objectFit: 'contain' }}

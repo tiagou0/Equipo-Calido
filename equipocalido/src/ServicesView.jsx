@@ -6,7 +6,7 @@ export default function ServicesView({ namePlan, price, text }) {
 
     return (
         <>
-            
+
             <SpotlightCard
                 className="custom-spotlight-card"
                 spotlightColor="rgba(255, 166, 0, 0)"

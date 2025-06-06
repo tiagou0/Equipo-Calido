@@ -3,6 +3,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './Navbar';
 import './assets/style.css';
 import ServicesView from './ServicesView';
+import FooterImg from './FooterImg';
+import LinkView from './LinkView';
+import AboutView from './AboutView';
+import logo from './assets/logo.png';
+import ico1 from './assets/imgs/ico1.png';
+import ico2 from './assets/imgs/ico2.png';
+import ico3 from './assets/imgs/ico3.png';
+import ico4 from './assets/imgs/ico4.png';
 
 function App() {
 
@@ -31,9 +39,46 @@ function App() {
           price={"30 USD/MES"}
           text={"Este es el tercer plan, con el mismo podrás..."}
         />
-
+        <FooterImg />
       </div>
-
+      <div className="containerLinksTitle">
+        <h2 className='h2containerServices'>NUESTROS LINKS</h2>
+      </div>
+      <div className="linkViewContainer" >
+        <LinkView
+          background={{
+            background: 'linear-gradient(0deg, rgba(255, 222, 91, 1) 26%, rgba(255, 255, 255, 1) 84%)',
+            backgroundBlendMode: 'normal'
+          }}
+          link={"https://www.instagram.com/equipocalido/"}
+          imgSrc={ico1}
+        />
+        <LinkView
+          background={{
+            background: 'linear-gradient(180deg, rgba(255, 222, 91, 1) 26%, rgba(255, 255, 255, 1) 84%)',
+            backgroundBlendMode: 'normal'
+          }}
+          link={"https://www.facebook.com/calidobycintiag?locale=es_LA"}
+          imgSrc={ico2}
+        />
+        <LinkView
+          background={{
+            background: 'linear-gradient(0deg, rgba(255, 222, 91, 1) 26%, rgba(255, 255, 255, 1) 84%)',
+            backgroundBlendMode: 'normal'
+          }}
+          link={"https://equipocalido.tiendup.com/"}
+          imgSrc={ico3}
+        />
+        <LinkView
+          background={{
+            background: 'linear-gradient(180deg, rgba(255, 222, 91, 1) 26%, rgba(255, 255, 255, 1) 84%)',
+            backgroundBlendMode: 'normal'
+          }}
+          link={"https://www.youtube.com/@equipocalidoo"}
+          imgSrc={ico4}
+        />
+      </div>
+      <AboutView />
     </>
   )
 }
