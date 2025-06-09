@@ -1,7 +1,11 @@
+/* Estilos base para el contenedor root */
 #root {
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+  /* Previene scroll horizontal */
 }
 
 .imgFooter {
@@ -24,15 +28,14 @@
 
 .inicio-imagen {
   width: 100% !important;
-  /* Cambiado de 70% a 100% */
   height: 100% !important;
-  /* Añadido para cubrir todo el contenedor */
   object-fit: cover !important;
 }
 
 .navbarEC {
   background-color: #FAFA61;
   padding: 0.5rem 1rem;
+  width: 100%;
 }
 
 .navItem {
@@ -96,6 +99,75 @@
 
 /* Res para moviless */
 @media (max-width: 991px) {
+
+  /* Ajustes generales para contenedores principales */
+  .containerServices,
+  .containerServicesTitle,
+  .linkViewContainer,
+  .containerLinksTitle {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .containerAbout img {
+    margin-top: 40px;
+  }
+
+  .sentenceContainer {
+    margin-top: -60px !important;
+  }
+
+  .imgFooter {
+    width: 100vw !important;
+    height: 200px !important;
+    padding: 0 !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+  }
+
+  .imgFooter img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+  }
+
+  .inicio-container {
+    height: fit-content !important;
+  }
+
+  .inicio-imagen-container img {
+    width: 100% !important;
+    max-width: 100% !important;
+    aspect-ratio: 3/3 !important;
+  }
+
+  .text-rotate {
+    font-size: 1.7rem !important;
+  }
+
+  .inicio-imagen-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    aspect-ratio: 3/4 !important;
+  }
+
+  /* Ajustes específicos para el navbar */
+  .navbarEC {
+    width: 100% !important;
+    /* Cambiado de 80% a 100% */
+    padding: 10px !important;
+  }
+
   .navItem {
     text-align: center;
     padding: 10px 0;
@@ -115,6 +187,69 @@
     background-color: #FAFA61;
     padding: 10px;
     border-radius: 0 0 8px 8px;
+    width: 100%;
+    /* Asegurar que ocupe todo el ancho */
+    margin: 0;
+    /* Eliminar márgenes */
+    position: absolute;
+    /* Posicionamiento absoluto */
+    left: 0;
+    /* Alinear a la izquierda */
+    top: 100%;
+    /* Colocar debajo del navbar */
+  }
+
+  .navbar-toggler {
+    margin-right: 0.5rem;
+    /* Dar espacio al botón de menú */
+  }
+
+  .navbar-brand img {
+    width: 80px;
+    /* Reducir tamaño del logo en móviles */
+    height: auto;
+  }
+
+  /* Ajustes para el contenedor de links */
+  .linkViewContainer {
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 20px !important;
+  }
+
+  /* Ajustes para títulos */
+  .h2containerServices {
+    font-size: 40px !important;
+    /* Reducir tamaño en móviles */
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Ajustes para la imagen de inicio */
+  .inicio-imagen {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Ajustes para el texto de inicio */
+  .inicio-texto {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ajustes para el contenedor About */
+  .containerAbout {
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 20px 15px !important;
+  }
+
+  .containerAbout img {
+    width: 80% !important;
+    /* Ajustar tamaño de imagen en móviles */
+    margin-bottom: 20px !important;
   }
 }
 
@@ -259,6 +394,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .linkContainer:hover {
   transform: scale(1.10);
   transition: transform 0.3s ease;
@@ -279,7 +415,7 @@
   flex-direction: row;
   text-align: center;
   position: relative;
-  padding-top: 60px; 
+  padding-top: 60px;
 }
 
 .containerAbout img {
@@ -290,24 +426,26 @@
 }
 
 .about-yellow-banner {
-    width: 100%;
-    height: 120px;
-    background-color: #FAFA61;
-    margin-top: 50px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 120px;
+  background-color: #FAFA61;
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes floatingAnimation {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0);
   }
