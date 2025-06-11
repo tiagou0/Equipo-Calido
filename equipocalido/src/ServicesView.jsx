@@ -1,8 +1,9 @@
+import AOS from 'aos';
 import SpotlightCard from './Components/SpotlightCard/SpotlightCard'
 
 
 export default function ServicesView({ namePlan, price, text }) {
-
+    
 
     return (
         <>

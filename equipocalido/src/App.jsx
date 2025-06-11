@@ -6,11 +6,14 @@ import ServicesView from './ServicesView';
 import FooterImg from './FooterImg';
 import LinkView from './LinkView';
 import AboutView from './AboutView';
+import FormView from './FormView';
 import logo from './assets/logo.png';
 import ico1 from './assets/imgs/ico1.png';
 import ico2 from './assets/imgs/ico2.png';
 import ico3 from './assets/imgs/ico3.png';
 import ico4 from './assets/imgs/ico4.png';
+import WhatsAppButton from './WhatsAppButton';
+
 
 function App() {
 
@@ -23,7 +26,7 @@ function App() {
         <p>Cursos Online de Costura Creativa.</p>
       </div>
 
-      <div className='containerServices'>
+      <div className='containerServices' >
         <ServicesView
           namePlan={"Plan Básico"}
           price={"10 USD/MES"}
@@ -79,6 +82,8 @@ function App() {
         />
       </div>
       <AboutView />
+      <FormView />
+      <WhatsAppButton />
     </>
   )
 }

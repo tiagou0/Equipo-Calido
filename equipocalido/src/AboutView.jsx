@@ -3,24 +3,34 @@ import FooterImg from './FooterImg'
 import logo from './assets/imgs/PictureProfile.png'
 import ScrollReveal from './TextAnimations/ScrollReveal/ScrollReveal'
 import ScrollVelocity from './TextAnimations/ScrollVelocity/ScrollVelocity'
+import AOS from 'aos';
+import { useEffect } from 'react'
 
 
 export default function AboutView() {
-
+    useEffect(() => {
+        AOS.refresh();
+    }, []);
 
     return (
         <>
             <div className="about-yellow-banner">
                 <div style={{ width: '100%', height: '120px', overflow: 'hidden' }}>
-                    <ScrollVelocity 
+                    <ScrollVelocity
                         texts={['Equipo Calido']}
                         velocity={20}
-                        className="custom-scroll-text" 
+                        className="custom-scroll-text"
                     />
                 </div>
             </div>
             <div className="containerAbout">
-                <img src={logo} />
+                <img data-aos="fade-left"
+                    data-aos-offset="100"
+                    data-aos-delay="50"
+                    data-aos-duration="300"
+                    data-aos-easing="ease-in-out"
+                    data-aos-mirror="true"
+                    data-aos-once="false" src={logo} />
                 <div className="sentenceContainer">
                     <div className="containerLinksTitle">
                         <h2 className='h2containerServices'>¿A QUÉ NOS <br /> DEDICAMOS? </h2>

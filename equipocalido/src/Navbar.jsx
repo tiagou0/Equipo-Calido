@@ -21,6 +21,14 @@ const NavbarComponent = () => {
           <Nav.Link className='navItem' to="/">Inicio</Nav.Link>
           <Nav.Link className='navItem' to="/about">Acerca de</Nav.Link>
           <Nav.Link className='navItem' to="/contact">Contacto</Nav.Link>
+          <Nav.Link
+            className='navItem'
+            href="https://equipocalido.tiendup.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nuestra Tienda
+          </Nav.Link>
         </Nav>
         <Nav>
           <Nav.Link className='navItem auth-link' to="/register">Registrarse</Nav.Link>
@@ -31,4 +39,4 @@ const NavbarComponent = () => {
   );
 }
 
-export default NavbarComponent;
+export default NavbarComponent; 
