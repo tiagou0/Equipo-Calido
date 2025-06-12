@@ -30,9 +30,9 @@ export default function AboutView() {
                         baseRotation={5}
                         blurStrength={10}
                     >
-                        When does a man die? When he is hit by a bullet? No! When he suffers a disease?
-                        No! When he ate a soup made out of a poisonous mushroom?
-                        No! A man dies when he is forgotten!
+                        Nos especializamos en la venta de insumos de costura y en la enseñanza de técnicas textiles para todos los niveles.
+                        Ofrecemos materiales de calidad seleccionados con criterio y experiencia, y dictamos clases prácticas donde compartimos conocimientos, creatividad y pasión por el oficio.
+                        Creemos en el valor de lo hecho a mano y en el aprendizaje como camino para crecer y crear con libertad.
 
                     </ScrollReveal>
                 </div>
