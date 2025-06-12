@@ -1,5 +1,6 @@
 import AOS from 'aos';
 import SpotlightCard from './Components/SpotlightCard/SpotlightCard'
+import './assets/style.css';
 
 
 export default function ServicesView({ namePlan, price, text }) {
