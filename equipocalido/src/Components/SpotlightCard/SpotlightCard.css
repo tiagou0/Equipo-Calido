@@ -35,3 +35,92 @@
 .card-spotlight:focus-within::before {
   opacity: 0.6;
 }
+/*
+	Installed from https://reactbits.dev/ts/default/
+*/
+
+.card-spotlight {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 400px;
+  border-radius: 50px;
+  background-color: black;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(255, 255, 255, 0.05);
+}
+
+.card-spotlight:first-child{
+  background-color: #FFF396;
+}
+.card-spotlight:nth-child(2){
+  background-color: #FFE863;
+}
+.card-spotlight:nth-child(3){
+  background-color: #FFC860;
+}
+
+.card-spotlight:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.TitleSpotlightCard {
+  font-weight: bold;
+  font-size: 2.4rem;
+  background: linear-gradient(90deg, #000000, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.PriceSpotlightCard {
+  font-weight: bold;
+  font-size: 1.4rem;
+  background: linear-gradient(90deg, #000000, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-spotlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y),
+      var(--spotlight-color),
+      transparent 80%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.card-spotlight:hover::before,
+.card-spotlight:focus-within::before {
+  opacity: 0.6;
+}
+.ButtonSpotlightCard {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+}
