@@ -22,6 +22,7 @@ const NavbarComponent = () => {
           <Nav.Link as={Link} className='navItem' to="/">Inicio</Nav.Link>
           <Nav.Link as={Link} className='navItem' to="/about">Acerca de</Nav.Link>
           <Nav.Link as={Link} className='navItem' to="/contact">Contacto</Nav.Link>
+          <Nav.Link as={Link} className='navItem' to="/subscription-plans">Planes</Nav.Link>
           <Nav.Link
             className='navItem'
             href="https://equipocalido.tiendup.com/"

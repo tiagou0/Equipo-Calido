@@ -14,15 +14,23 @@ import ico4 from './assets/imgs/ico4.png';
 import WhatsAppButton from './WhatsAppButton';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RegisterView from './views/Register/RegisterView';
+import LoginView from './views/Login/LoginView';
+import Dashboard from './Components/Dashboard';
+import ProtectedRoute from './Components/ProtectedRoute';
+import SubscriptionPlans from './views/SubscriptionPlans/SubscriptionPlans';
+import { AuthProvider } from './context/AuthContext';
+import { SubscriptionProvider } from './context/SubscriptionContext';
 
 
 function App() {
 
   return (
-    <Router>
-      <>
-        <NavbarComponent />
-        <Routes>
+    <AuthProvider>
+      <SubscriptionProvider>
+        <Router>
+          <>
+            <NavbarComponent />
+            <Routes>
           <Route path="/" element={
             <>
               <Inicio />
@@ -92,9 +100,18 @@ function App() {
             </>
           } />
           <Route path="/register" element={<RegisterView />} />
+          <Route path="/login" element={<LoginView />} />
+          <Route path="/subscription-plans" element={<SubscriptionPlans />} />
+          <Route path="/dashboard" element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          } />
         </Routes>
       </>
     </Router>
+  </SubscriptionProvider>
+</AuthProvider>
   )
 }
 
