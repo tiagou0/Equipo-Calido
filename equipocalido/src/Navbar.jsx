@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import logo from './assets/logo.png';
 import './assets/style.css';
+import AboutView from './AboutView';
 
 const NavbarComponent = () => {
   return (
@@ -19,8 +20,15 @@ const NavbarComponent = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link className='navItem' to="/">Inicio</Nav.Link>
-          <Nav.Link className='navItem' to="/about">Acerca de</Nav.Link>
-          <Nav.Link className='navItem' to="/contact">Contacto</Nav.Link>
+          <Nav.Link className='navItem' to="">Acerca De</Nav.Link>
+          <Nav.Link
+            className='navItem'
+            href="https://wa.me/5401160330763"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contacto
+          </Nav.Link>
           <Nav.Link
             className='navItem'
             href="https://equipocalido.tiendup.com/"
@@ -39,4 +47,4 @@ const NavbarComponent = () => {
   );
 }
 
-export default NavbarComponent; 
+export default NavbarComponent;
