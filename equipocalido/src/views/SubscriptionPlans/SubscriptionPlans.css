@@ -1,0 +1,200 @@
+.subscription-plans-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 120px 20px 40px;
+}
+
+.subscription-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.subscription-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.subscription-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: "Sansation", sans-serif;
+}
+
+.subscription-header p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.payment-info {
+  background: #e8f5e8;
+  color: #155724;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #c3e6cb;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.current-subscription-info {
+  margin-top: 1rem;
+}
+
+.current-plan-badge {
+  display: inline-block;
+  background: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  justify-items: center;
+}
+
+.subscription-footer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.payment-methods {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.payment-methods h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-family: "Sansation", sans-serif;
+}
+
+.payment-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.payment-method {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+.subscription-benefits {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.subscription-benefits h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-family: "Sansation", sans-serif;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit {
+  text-align: center;
+  padding: 1rem;
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.benefit h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-family: "Sansation", sans-serif;
+}
+
+.benefit p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.subscription-guarantee {
+  background: #fff3cd;
+  color: #856404;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #ffc107;
+  text-align: center;
+}
+
+.subscription-guarantee p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.subscription-guarantee p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .subscription-plans-container {
+    padding: 100px 10px 20px;
+  }
+  
+  .subscription-header h1 {
+    font-size: 2rem;
+  }
+  
+  .subscription-header p {
+    font-size: 1rem;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .subscription-benefits {
+    padding: 2rem 1rem;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .payment-icons {
+    grid-template-columns: 1fr;
+  }
+}

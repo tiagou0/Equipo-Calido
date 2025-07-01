@@ -1,0 +1,161 @@
+.plan-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 1rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  max-width: 350px;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card.popular {
+  border: 3px solid #fd7e14;
+  transform: scale(1.05);
+}
+
+.plan-card.current {
+  border: 3px solid #28a745;
+  opacity: 0.8;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fd7e14;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0 0 12px 12px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.plan-header {
+  padding: 2rem 1.5rem 1rem;
+  text-align: center;
+  border-top: 4px solid;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.plan-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+  font-family: "Sansation", sans-serif;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.amount {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.interval {
+  font-size: 1rem;
+  color: #666;
+}
+
+.original-price {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+}
+
+.plan-features {
+  padding: 1.5rem;
+}
+
+.plan-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.checkmark {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.plan-action {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+
+.btn-select {
+  width: 100%;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  font-family: "Sansation", sans-serif;
+}
+
+.btn-select:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-current {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid #28a745;
+  border-radius: 6px;
+  background: transparent;
+  color: #28a745;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: not-allowed;
+  font-family: "Sansation", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .plan-card {
+    margin: 0.5rem;
+    max-width: none;
+  }
+  
+  .plan-card.popular {
+    transform: none;
+  }
+  
+  .amount {
+    font-size: 1.8rem;
+  }
+}
