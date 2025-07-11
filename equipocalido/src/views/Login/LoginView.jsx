@@ -4,6 +4,8 @@ import { auth } from "../../firebase";
 import { translateFirebaseError } from "../../utils/translations/errorMessages";
 import { Link, useNavigate } from "react-router-dom";
 import './LoginView.css';
+import logo from '../../assets/imgs/PictureProfile.png';
+import '../../assets/style.css';
 
 const LoginView = () => {
     const [email, setEmail] = useState("");
@@ -27,7 +29,7 @@ const LoginView = () => {
         try {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             console.log("Usuario logueado:", userCredential.user);
-            
+
             // Redirigir al dashboard o página principal
             navigate("/dashboard");
         } catch (error) {
@@ -42,9 +44,12 @@ const LoginView = () => {
         <div className="login-view">
             <div className="login-container">
                 <h2 className="login-title">Iniciar Sesión</h2>
-                
+                <div className="imgContainer">
+                    <img src={logo} alt="Logo" style={{ width: '400px', height: '400px', objectFit: 'cover', marginRight: '150px' }} />
+                    <h2 style={{ marginRight: '150px' }}>¡Registrate para acceder a <br /> todos nuestros beneficios!</h2>
+                </div>
                 {error && <div className="error-message">{error}</div>}
-                
+
                 <form onSubmit={handleSubmit} className="login-form">
                     <div className="form-group">
                         <label htmlFor="email">Email:</label>
@@ -72,8 +77,8 @@ const LoginView = () => {
                         />
                     </div>
 
-                    <button 
-                        type="submit" 
+                    <button
+                        type="submit"
                         className="submit-button"
                         disabled={loading}
                     >

@@ -1,5 +1,5 @@
 import './assets/style.css';
-import imgFooter from './assets/imgs/footerImg.png';
+import imgFooter from './assets/imgs/FooterImg.png';
 
 
 export default function FooterImg() {
