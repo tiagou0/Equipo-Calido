@@ -1,4 +1,5 @@
 .login-view {
+  position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -6,9 +7,40 @@
   background-color: #f5f5f5;
   padding: 20px;
   margin-top: 100px;
+  overflow: hidden;
+}
+
+.login-view::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('./DSC_5664.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(7px);
+  z-index: 0;
+}
+
+@keyframes animacionBlur {
+  0% {
+    transform: translateY(-20px);
+    filter:blur(200px) !important; /* Ajusta el valor para más o menos blur */
+  }
+  50% {
+    transform: translateY(10px);
+    filter:blur(100px) !important;
+  }
+  100% {
+    transform: translateY(0);
+    filter:blur(0px) !important;
+  }
+  
 }
 
 .login-container {
+  position: relative;
+  z-index: 1;
   background: white;
   padding: 2rem;
   border-radius: 8px;
@@ -115,3 +147,15 @@
 .auth-links a:hover {
   text-decoration: underline;
 }
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  z-index: 100;
+}
+
+/* Correct: Only for React or modules that support CSS imports */

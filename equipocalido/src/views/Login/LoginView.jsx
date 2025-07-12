@@ -5,7 +5,6 @@ import { translateFirebaseError } from "../../utils/translations/errorMessages";
 import { Link, useNavigate } from "react-router-dom";
 import './LoginView.css';
 import logo from '../../assets/imgs/PictureProfile.png';
-import '../../assets/style.css';
 
 const LoginView = () => {
     const [email, setEmail] = useState("");
@@ -42,12 +41,9 @@ const LoginView = () => {
 
     return (
         <div className="login-view">
+
             <div className="login-container">
                 <h2 className="login-title">Iniciar Sesión</h2>
-                <div className="imgContainer">
-                    <img src={logo} alt="Logo" style={{ width: '400px', height: '400px', objectFit: 'cover', marginRight: '150px' }} />
-                    <h2 style={{ marginRight: '150px' }}>¡Registrate para acceder a <br /> todos nuestros beneficios!</h2>
-                </div>
                 {error && <div className="error-message">{error}</div>}
 
                 <form onSubmit={handleSubmit} className="login-form">
@@ -90,6 +86,10 @@ const LoginView = () => {
                     <p>¿No tienes una cuenta? <Link to="/register">Regístrate aquí</Link></p>
                     <p><Link to="/forgot-password">¿Olvidaste tu contraseña?</Link></p>
                 </div>
+            </div>
+            <div className="imgContainer">
+                <img src={logo} alt="Logo" style={{ width: '400px', height: '400px', objectFit: 'cover', marginLeft: '150px' }} />
+                <h2 style={{ marginLeft: '150px' }}>¡Registrate para acceder a <br /> todos nuestros beneficios!</h2>
             </div>
         </div>
     );
