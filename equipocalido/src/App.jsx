@@ -20,6 +20,7 @@ import ProtectedRoute from './Components/ProtectedRoute';
 import SubscriptionPlans from './views/SubscriptionPlans/SubscriptionPlans';
 import { AuthProvider } from './context/AuthContext';
 import { SubscriptionProvider } from './context/SubscriptionContext';
+import AuthUser from './views/AuthUser/AuthUser';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
             <Routes>
           <Route path="/" element={
             <>
-              <Inicio />
+              <Inicio /> {/* modulo del primer segmento */}
               <div className="containerServicesTitle">
                 <h2 className='h2containerServices'>Academia Creativa</h2>
                 <p>Cursos Online de Costura Creativa.</p>
@@ -99,6 +100,9 @@ function App() {
               <WhatsAppButton />
             </>
           } />
+          
+          <Route path="/authuser" element={<AuthUser/>} />
+          <Route path="/account" element={<Dashboard/>} />
           <Route path="/register" element={<RegisterView />} />
           <Route path="/login" element={<LoginView />} />
           <Route path="/subscription-plans" element={<SubscriptionPlans />} />

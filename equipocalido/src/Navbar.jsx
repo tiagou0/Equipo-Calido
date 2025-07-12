@@ -42,6 +42,13 @@ const NavbarComponent = () => {
         <Nav>
           <Nav.Link 
             as={Link} 
+            to="/authuser"
+            className='navItem auth-link'
+          >
+            Mi Cuenta 
+          </Nav.Link>
+          <Nav.Link 
+            as={Link} 
             to="/register"
             className='navItem auth-link'
           >
