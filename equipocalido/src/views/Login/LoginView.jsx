@@ -89,7 +89,7 @@ const LoginView = () => {
             </div>
             <div className="imgContainer">
                 <img src={logo} alt="Logo" style={{ width: '400px', height: '400px', objectFit: 'cover', marginLeft: '150px' }} />
-                <h2 style={{ marginLeft: '150px' }}>¡Registrate para acceder a <br /> todos nuestros beneficios!</h2>
+                <h2 style={{ marginLeft: '150px' }}>¡Iniciá sesión para acceder a <br /> todos nuestros beneficios!</h2>
             </div>
         </div>
     );

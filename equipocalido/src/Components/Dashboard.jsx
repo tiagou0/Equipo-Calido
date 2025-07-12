@@ -3,6 +3,7 @@ import { useSubscription } from '../context/SubscriptionContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { SUBSCRIPTION_PLANS, formatPrice } from '../utils/subscriptionPlans';
 import './Dashboard.css';
+import FooterImg from '../FooterImg';
 
 const Dashboard = () => {
   const { user, logout } = useAuth();
@@ -28,7 +29,6 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
-        <h1>Panel de Usuario</h1>
         <button onClick={handleLogout} className="logout-button">
           Cerrar Sesión
         </button>
@@ -36,7 +36,7 @@ const Dashboard = () => {
       
       <div className="dashboard-content">
         <div className="welcome-section">
-          <h2>¡Bienvenido/a, {user?.displayName || user?.email?.split('@')[0]}!</h2>
+          <h2><span style={{ color: '#e0e047ff', fontWeight: 'bold' }}>¡Bienvenido/a</span> {user?.displayName || user?.email?.split('@')[0]}!</h2>
           <p>Email: {user?.email}</p>
           <p>Usuario verificado: {user?.emailVerified ? 'Sí' : 'No'}</p>
         </div>
@@ -56,7 +56,7 @@ const Dashboard = () => {
                   </p>
                 </div>
                 <div className="subscription-actions">
-                  <Link to="/subscription-plans" className="btn-manage">
+                  <Link to="/" className="btn-manage">
                     Cambiar Plan
                   </Link>
                 </div>
@@ -65,7 +65,7 @@ const Dashboard = () => {
           ) : (
             <div className="no-subscription">
               <p>No tienes una suscripción activa</p>
-              <Link to="/subscription-plans" className="btn-subscribe">
+              <Link to="/" className="btn-subscribe">
                 Ver Planes de Suscripción
               </Link>
             </div>
@@ -102,6 +102,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <FooterImg />
     </div>
   );
 };
